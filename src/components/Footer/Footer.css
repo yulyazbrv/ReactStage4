@@ -1,13 +1,15 @@
 .footer {
   width: 100%;
   display: flex;
-  justify-content: center;
+  background-color: white;
+  position: relative;
+  z-index: 1;
 }
 
 .container-footer {
   max-width: 1140px;
   width: 100%;
-  margin: 0 10px;
+  margin: 0 8%;
   padding-top: 20px;
   padding-bottom: 40px;
   display: flex;
@@ -19,11 +21,14 @@
   width: 50%;
   justify-content: space-between;
 }
-
+.list-item {
+  margin-right: 10px;
+}
 .footer-h2 {
-  font-weight: 550;
+  font-weight: bold;
   font-size: 115%;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .footer-h2:hover {

@@ -1,29 +1,52 @@
 .fourth-intro {
-    width: 100%;
-    background-color: rgba(235, 242, 242, 1);
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  background-color: rgba(235, 242, 242, 1);
+  display: flex;
+  justify-content: center;
 }
-  
+
 .container-fourth {
-    display: block;
-    max-width: 1140px;
-    width: 100%;
-    margin: 0 10px;
-    padding-top: 30px;
-    padding-bottom: 50px;
+  display: flex;
+  width: 100%;
+  margin: 0 8%;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  position: relative;
 }
-  
+
 .container-gets {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  position: relative;
+  z-index: 2;
 }
-  
+
 .child-gets {
-    width: 35%;
+  width: 70%;
+  margin-right: 50px;
 }
-  
+
 .get-news {
-    font-size: 24px;
-    font-weight: 550;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.circle-banner {
+  background-color: #6db33f;
+  border-radius: 50%;
+  height: 345px;
+  position: absolute;
+  right: -200px;
+  top: 32px;
+  width: 345px;
+  z-index: 0;
+}
+
+.footer-icon {
+  height: 100px;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  width: 100px;
 }

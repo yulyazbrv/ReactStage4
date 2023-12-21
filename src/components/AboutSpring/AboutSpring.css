@@ -1,17 +1,16 @@
 .first-intro {
-    width: 100%;
-  }
-  
-  .first-intro-title {
-    font-size: 60px;
-    margin: 60px 10px 0px;
-  }
-  
-  .first-intro-about {
-    font-size: 24px;
-    max-width: 1040px;
-    line-height: 1.7;
-    margin: 0 10px 80px;
-  }
-  
-  
+  width: 100%;
+  display: flex;
+}
+
+.first-intro-title {
+  font-size: 60px;
+  margin: 60px 10px 0px;
+}
+
+.first-intro-about {
+  font-size: 24px;
+  max-width: 1040px;
+  line-height: 1.7;
+  margin: 0 10px 80px;
+}
