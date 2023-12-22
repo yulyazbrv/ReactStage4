@@ -12,12 +12,12 @@ const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const loginClick = () => {
-    try {
+    if (email && password) {
       dispatch(setUserEmail(email));
       dispatch(setUserPassword(password));
       navigate(`/`, { replace: true });
-    } catch (e) {
-      setError(e.message);
+    } else {
+      setError('please fill in all the fields');
     }
   };
 
