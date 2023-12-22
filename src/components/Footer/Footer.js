@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
           <div className="child-input-area">
             <input type="checkbox" name="ch1" />
-            <p style={{margin: 0}}>
+            <p className='confirm-text'>
               Yes, I would like to be contacted by The Spring Team and VMware for newsletters, promotions and events
             </p>
           </div>

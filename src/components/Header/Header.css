@@ -1,4 +1,3 @@
-/*styles for header */
 .header {
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -30,11 +29,7 @@
   margin-right: 0 !important;
   cursor: pointer;
 }
-/* 
-.icon-close {
-  font-size: 30px;
-  cursor: pointer;
-} */
+
 
 .nav {
   width: 70%;
@@ -56,24 +51,14 @@
   position: relative;
 }
 
-.nav-with-hidden1,
-.nav-with-hidden2,
-.nav-with-hidden3,
-.nav-with-hidden4,
-.nav-with-hidden5,
-.nav-with-hidden6 {
+.container-menu {
   display: flex;
   align-items: center;
   z-index: 3;
   height: 100%;
 }
 
-.nav-with-hidden1:hover #hidmen1,
-.nav-with-hidden2:hover #hidmen2,
-.nav-with-hidden3:hover #hidmen3,
-.nav-with-hidden4:hover #hidmen4,
-.nav-with-hidden5:hover #hidmen5,
-.nav-with-hidden6:hover #hidmen6 {
+.container-menu:hover .hidden-menu {
   opacity: 1;
   transition: 0.4s;
   pointer-events: auto;
@@ -102,18 +87,17 @@
 }
 
 .mobile-menu {
-  /* display: none; */
   background-color: #191e1e;
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
+  right: 5px;
   z-index: 11;
   max-width: 100%;
   overflow-y: scroll;
   animation: slideDown 0.3s ease-out;
   overflow-x: hidden;
-  margin: -10px!important
 }
 
 .sumbol-close {
@@ -134,34 +118,37 @@
   margin: 80px 20px;
 }
 
+.title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.items-container > p {
+  color: white;
+  opacity: 0.7;
+  line-height: 1;
+}
+
+.items-container > p:hover, .title-container:hover > h1 {
+  color: #6db33f;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
 .item-menu {
   border-bottom: 1px solid rgba(255, 255, 255, 1);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.first-mobile-hidden-menu,
-.second-mobile-hidden-menu,
-.third-mobile-hidden-menu {
-  /* display: none; */
-  transition: 0.5s;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .arrow-icon {
   height: 30px;
-  width: 100%;
   cursor: pointer;
-}
-
-.menu-title {
-  font-weight: 100;
-  cursor: pointer;
-}
-
-.menu-title:hover {
-  color: #6db33f;
-  transition: 0.2s;
 }
 
 @keyframes slideDown {

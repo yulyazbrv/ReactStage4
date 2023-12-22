@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import './Projects.css';
+import { projects } from '../../data/data';
 import searchIcon from '../../images/search.svg';
-const Projects = (props) => {
-  const { projects } = props;
+import './Projects.css';
+
+const Projects = () => {
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [value, setValue] = useState('');
   useEffect(() => {
@@ -14,23 +15,27 @@ const Projects = (props) => {
     }, 400);
 
     return () => clearTimeout(filterTimeout);
-  }, [value, projects]);
+  }, [value]);
 
   return (
-    <div className="second-intro">
-      <div className="container-second">
-        <form action="">
-          <input className="search" type="search" onChange={(event) => setValue(event.target.value)} />
-          <img className="fa fa-search" alt='icon-project' src={searchIcon} />
-        </form>
-        <div className="container-projects" id="cont-prj">
+    <div className='second-intro'>
+      <div className='container-second'>
+        <div className='search-container'>
+          <input
+            className='search'
+            type='search'
+            onChange={(event) => setValue(event.target.value)}
+          />
+          <img className='fa' alt='icon-project' src={searchIcon} />
+        </div>
+        <div className='projects-container'>
           {filteredProjects.map((project, index) => (
-            <div className="child-projects" key={index}>
+            <div className='child-projects' key={index}>
               <div>
-                <img className="icons" alt='icon project' src={project.img} />
+                <img className='icons' alt='icon project' src={project.img} />
               </div>
               <div>
-                <p className="name-project">{project.name}</p>
+                <p className='name-project'>{project.name}</p>
                 <p>{project.info}</p>
               </div>
             </div>
