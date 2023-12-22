@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { projects } from '../../data/data';
 import searchIcon from '../../images/search.svg';
+import { useSelector } from 'react-redux';
 import './Projects.css';
 
 const Projects = () => {
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [value, setValue] = useState('');
+  const pr = useSelector((state) => state.projects);
   useEffect(() => {
     const filterTimeout = setTimeout(() => {
-      const filtered = projects.filter((project) => {
+      const filtered = pr.projects.filter((project) => {
         return project.name.toLowerCase().includes(value.toLowerCase());
       });
       setFilteredProjects(filtered);
     }, 400);
 
     return () => clearTimeout(filterTimeout);
-  }, [value]);
+  }, [value, pr.projects]);
 
   return (
     <div className='second-intro'>
