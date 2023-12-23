@@ -8,6 +8,7 @@ import './Header.css';
 const Header = () => {
   const [showMobile, setShowMobile] = useState(false);
   const [expandedItems, setExpandedItems] = useState([]);
+  
   const renderMobileMenuItems = (menuTitles) => {
     return menuTitles.map((item, index) => <p key={index}>{item.name}</p>);
   };

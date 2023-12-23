@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { setUserEmail } from '../../redux/slices/userSlice';
-import { setUserPassword } from '../../redux/slices/passwordSlice';
+import { setUserCredentials } from '../../redux/slices/userCredentialsSlice';
 import './style.css';
 
 const Login = () => {
@@ -11,10 +10,10 @@ const Login = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  
   const loginClick = () => {
     if (email && password) {
-      dispatch(setUserEmail(email));
-      dispatch(setUserPassword(password));
+      dispatch(setUserCredentials({ email, password }));
       navigate(`/`, { replace: true });
     } else {
       setError('please fill in all the fields');

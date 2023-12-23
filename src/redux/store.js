@@ -1,12 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import userReducer from './slices/userSlice';
-import passwordReducer from './slices/passwordSlice';
 import projectsReducer from './slices/projectsSlice';
-
+import userCredentialReducer from './slices/userCredentialsSlice';
 export const store = configureStore({
   reducer: {
-    user: userReducer,
-    password: passwordReducer,
+    user: userCredentialReducer,
     projects: projectsReducer,
   },
 });

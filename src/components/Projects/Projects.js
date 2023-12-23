@@ -7,6 +7,7 @@ const Projects = () => {
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [value, setValue] = useState('');
   const pr = useSelector((state) => state.projects);
+  
   useEffect(() => {
     const filterTimeout = setTimeout(() => {
       const filtered = pr.projects.filter((project) => {
